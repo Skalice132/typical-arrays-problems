@@ -30,11 +30,14 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-		let sum = 0;
-	  for(let i = 0; i < array.length; i++) {
-	    let currentValue = array[i];
-	    sum += currentValue;
+		if ((array == 0) || (array == undefined)) {
+			return 0;
+	  } else {
+			let sum = 0;
+		  for(let i = 0; i < array.length; i++) {
+		    let currentValue = array[i];
+		    sum += currentValue;
+		  }
+		  return sum/array.length;
 	  }
-	  let result = sum/array.length;
-	  return result;		
 }
